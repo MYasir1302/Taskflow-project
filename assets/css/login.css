@@ -1,0 +1,257 @@
+.login-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(108, 99, 255, 0.22), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(87, 200, 255, 0.14), transparent 20%),
+    #4a4656;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.login-shell {
+  width: min(1240px, 100%);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: min(760px, calc(100vh - 40px));
+  background: rgba(20, 22, 31, 0.94);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 36px 90px rgba(8, 8, 15, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.login-hero {
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(108, 99, 255, 0.28), transparent 34%),
+    linear-gradient(180deg, rgba(31, 33, 44, 0.98), rgba(19, 21, 29, 0.98));
+  color: #fff;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.login-hero-inner {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.login-hero-brand {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.login-hero-brand .brand-copy {
+  text-align: center;
+}
+
+.login-card {
+  padding: 32px;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(24, 25, 32, 0.98), rgba(19, 20, 27, 0.98));
+}
+
+.login-card h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #f5f7ff;
+}
+
+.login-card p {
+  margin: 0;
+  color: #9ca3b8;
+}
+
+.login-card label {
+  color: #e8ebf9;
+}
+
+.login-card input {
+  background: #101116;
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #eef1ff;
+  border-radius: 14px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 50px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #cfd5ea;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.password-toggle:hover {
+  background: rgba(125, 114, 255, 0.14);
+  color: #eef1ff;
+}
+
+.password-toggle:focus-visible {
+  outline: 2px solid rgba(125, 114, 255, 0.34);
+  outline-offset: 2px;
+}
+
+.password-toggle-icon {
+  display: grid;
+  place-items: center;
+}
+
+.password-toggle-icon[hidden] {
+  display: none;
+}
+
+.password-toggle-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.login-card input::placeholder {
+  color: #767d91;
+}
+
+.login-card input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.login-card input:focus {
+  border-color: rgba(125, 114, 255, 0.46);
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.12);
+}
+
+.login-feedback {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 109, 146, 0.24);
+  background:
+    linear-gradient(180deg, rgba(255, 109, 146, 0.12), rgba(255, 109, 146, 0.06)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 36px rgba(10, 10, 18, 0.12);
+  animation: login-feedback-in 0.22s ease;
+}
+
+.login-feedback[hidden] {
+  display: none;
+}
+
+.login-feedback-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff4f7;
+  background: linear-gradient(135deg, #ff6d92, #ff8fb6);
+  box-shadow: 0 12px 24px rgba(255, 109, 146, 0.24);
+}
+
+.login-feedback-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.login-feedback-copy strong {
+  color: #fff2f6;
+  font-size: 0.98rem;
+}
+
+.login-feedback-copy p {
+  margin: 0;
+  color: #ffc7d5;
+  line-height: 1.45;
+  font-size: 0.9rem;
+}
+
+.login-form-error input.is-invalid {
+  border-color: rgba(255, 109, 146, 0.34);
+  box-shadow: 0 0 0 4px rgba(255, 109, 146, 0.09);
+}
+
+.login-form-error input.is-invalid:focus {
+  border-color: rgba(255, 143, 182, 0.56);
+  box-shadow: 0 0 0 4px rgba(255, 109, 146, 0.14);
+}
+
+.login-card .btn-primary {
+  background: linear-gradient(135deg, #6c63ff, #7d72ff);
+  box-shadow: 0 18px 30px rgba(90, 83, 240, 0.18);
+}
+
+@keyframes login-feedback-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.credential-list {
+  display: grid;
+  gap: 10px;
+}
+
+.credential-item {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #e9edff;
+}
+
+.credential-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.credential-item .hint {
+  color: #aab2c8;
+}
+
+@media (max-width: 960px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .login-hero,
+  .login-card {
+    padding: 28px;
+  }
+
+  .login-page {
+    overflow: auto;
+  }
+}

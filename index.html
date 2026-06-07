@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASKFLOW</title>
+  </head>
+  <body>
+    <script src="assets/js/core/utils.js?v=20260515f"></script>
+    <script src="assets/js/core/events.js?v=20260515f"></script>
+    <script src="assets/js/core/storage.js?v=20260515f"></script>
+    <script>
+      (function () {
+        try {
+          var response = TaskFlow.storage.requestSync("auth/session.php", "GET");
+          if (response && response.success && response.user) {
+            window.location.replace("dashboard.html");
+            return;
+          }
+        } catch (error) {
+          // Fall through to login page.
+        }
+        window.location.replace("login.html");
+      })();
+    </script>
+  </body>
+</html>

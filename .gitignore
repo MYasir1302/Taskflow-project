@@ -1,0 +1,19 @@
+# Database config with credentials — copy config.example.php and fill in your values
+api/config.php
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & temp files
+*.log
+*.tmp
+
+# Node modules (if ever added)
+node_modules/
+
+# PHP environment files
+.env
+.env.local
